@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #333;
+        }
+        .container {
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+<script src="../plugin/helpers.js"></script>
+<script src="../plugin/waterfall.js"></script>
+<script>
+    // let srcs = [];
+    // for(let i = 1; i <= 20; i++) {
+    //     srcs.push(`./image/img (${i}).jpg`);
+    // }
+
+    // myPlugin.imageWaterfallFlow({
+    //     imgSrcs: srcs, //图片路径的数组
+    //     container: document.querySelector(".container"),
+    // });
+    let srcs = [];
+
+    for(let i = 1; i <= 10; i++) {
+        srcs.push(`./image/img (${i}).jpg`);
+    }
+
+    myPlugin.createWaterFall({
+        imgSrcs: srcs,
+        container: document.querySelector('.container')
+    });
+</script>
+</html>
